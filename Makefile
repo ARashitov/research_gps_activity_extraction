@@ -11,7 +11,8 @@ env_install_precommit_hooks:
 env_install_dependencies:
 	pip3 install --upgrade pip \
 	&& pip3 install wheel \
-	&& pip3 install poetry==1.2.2
+	&& pip3 install poetry==1.2.2 \
+	&& poetry install
 
 env_install_jupyter_extensions:
 	jupyter contrib nbextension install --sys-prefix \
@@ -22,7 +23,7 @@ env_install_jupyter_extensions:
 	&& jupyter nbextension enable spellchecker/main \
 	&& jupyter nbextension enable toggle_all_line_numbers/main \
 	&& jupyter nbextension enable hinterland/hinterland \
-	&& pip install jupyterthemes && jt -t oceans16
+	&& jt -t oceans16
 
 env_delete:
 	conda remove --name research_gps_activity_extraction --all -y
