@@ -23,7 +23,7 @@ env_install_jupyter_extensions:
 	&& jupyter nbextension enable spellchecker/main \
 	&& jupyter nbextension enable toggle_all_line_numbers/main \
 	&& jupyter nbextension enable hinterland/hinterland \
-	&& jt -t oceans16
+	&& jt -t grade3
 
 env_delete:
 	conda remove --name research_gps_activity_extraction --all -y
