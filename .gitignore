@@ -369,3 +369,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+!grid_search_results.csv
