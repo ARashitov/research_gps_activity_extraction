@@ -10,7 +10,6 @@ packages = []
 python = ">=3.11,<3.12"
 pandas = "^1.5.3"
 scikit-learn = "^1.2.1"
-gps-activity = "^0.7.1"
 keplergl = "^0.3.2"
 autopep8 = "^2.0.2"
 pre-commit = "^3.1.1"
@@ -25,6 +24,8 @@ jupyter = "^1.0.0"
 jupyter-contrib-core = "^0.4.2"
 jupyter-contrib-nbextensions = "^0.7.0"
 jupyterthemes = "^0.20.0"
+multiprocess = "^0.70.14"
+gps-activity = "0.7.2"
 
 
 [build-system]

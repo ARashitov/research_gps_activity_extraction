@@ -293,6 +293,17 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "dill"
+version = "0.3.6"
+description = "serialize all of python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+graph = ["objgraph (>=1.7.2)"]
+
+[[package]]
 name = "distlib"
 version = "0.3.6"
 description = "Distribution utilities"
@@ -493,7 +504,7 @@ shapely = ">=1.7,<2"
 
 [[package]]
 name = "gps-activity"
-version = "0.7.1"
+version = "0.7.2"
 description = "A light-weight mobile module for analysis of GPS activity"
 category = "main"
 optional = false
@@ -1057,6 +1068,17 @@ python-versions = "*"
 click = ">=7.1.2"
 setuptools = "*"
 stdlib-list = ">=0.5.0"
+
+[[package]]
+name = "multiprocess"
+version = "0.70.14"
+description = "better multiprocessing and multithreading in python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+dill = ">=0.3.6"
 
 [[package]]
 name = "munch"
@@ -2007,7 +2029,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.11,<3.12"
-content-hash = "56cdc9b8daa3885b888f690a435556a6ce353984bcc06a36ebc62c6f33da6590"
+content-hash = "2f88c6a8129d3146789e5dc010e6d0b5b2bf070df4258785431976cceebc3ffd"
 
 [metadata.files]
 anyio = [
@@ -2258,6 +2280,10 @@ defusedxml = [
     {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
     {file = "defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"},
 ]
+dill = [
+    {file = "dill-0.3.6-py3-none-any.whl", hash = "sha256:a07ffd2351b8c678dfc4a856a3005f8067aea51d6ba6c700796a4d9e280f39f0"},
+    {file = "dill-0.3.6.tar.gz", hash = "sha256:e5db55f3687856d8fbdab002ed78544e1c4559a130302693d839dfe8f93f2373"},
+]
 distlib = [
     {file = "distlib-0.3.6-py2.py3-none-any.whl", hash = "sha256:f35c4b692542ca110de7ef0bea44d73981caeb34ca0b9b6b2e6d7790dda8f80e"},
     {file = "distlib-0.3.6.tar.gz", hash = "sha256:14bad2d9b04d3a36127ac97f30b12a19268f211063d8f8ee4f47108896e11b46"},
@@ -2336,8 +2362,8 @@ geopandas = [
     {file = "geopandas-0.11.1.tar.gz", hash = "sha256:f0f0c8d0423d30cf81de2056d853145c4362739350a7f8f2d72cc7409ef1eca1"},
 ]
 gps-activity = [
-    {file = "gps_activity-0.7.1-py3-none-any.whl", hash = "sha256:652110cc7968ffc65f5dcf080f4004195490f10ed5e1b3e74daae06fca3bb1a9"},
-    {file = "gps_activity-0.7.1.tar.gz", hash = "sha256:71aaa79e87a955366de9393fb7ad1ae4c5b9214a130268a774b0665c9a65f3b0"},
+    {file = "gps_activity-0.7.2-py3-none-any.whl", hash = "sha256:d013b3894c2f4a3c7d3e8a0bf637d580eebab3f6bac792de6697ecebc931e251"},
+    {file = "gps_activity-0.7.2.tar.gz", hash = "sha256:531294bd18269a0878f09c0997edbcfb650f5a5bcb43f28c8430dcd5be538717"},
 ]
 identify = [
     {file = "identify-2.5.18-py2.py3-none-any.whl", hash = "sha256:93aac7ecf2f6abf879b8f29a8002d3c6de7086b8c28d88e1ad15045a15ab63f9"},
@@ -2707,6 +2733,22 @@ mistune = [
 mr-proper = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
     {file = "mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
+]
+multiprocess = [
+    {file = "multiprocess-0.70.14-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:560a27540daef4ce8b24ed3cc2496a3c670df66c96d02461a4da67473685adf3"},
+    {file = "multiprocess-0.70.14-pp37-pypy37_pp73-manylinux_2_24_i686.whl", hash = "sha256:bfbbfa36f400b81d1978c940616bc77776424e5e34cb0c94974b178d727cfcd5"},
+    {file = "multiprocess-0.70.14-pp37-pypy37_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:89fed99553a04ec4f9067031f83a886d7fdec5952005551a896a4b6a59575bb9"},
+    {file = "multiprocess-0.70.14-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:40a5e3685462079e5fdee7c6789e3ef270595e1755199f0d50685e72523e1d2a"},
+    {file = "multiprocess-0.70.14-pp38-pypy38_pp73-manylinux_2_24_i686.whl", hash = "sha256:44936b2978d3f2648727b3eaeab6d7fa0bedf072dc5207bf35a96d5ee7c004cf"},
+    {file = "multiprocess-0.70.14-pp38-pypy38_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:e628503187b5d494bf29ffc52d3e1e57bb770ce7ce05d67c4bbdb3a0c7d3b05f"},
+    {file = "multiprocess-0.70.14-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:0d5da0fc84aacb0e4bd69c41b31edbf71b39fe2fb32a54eaedcaea241050855c"},
+    {file = "multiprocess-0.70.14-pp39-pypy39_pp73-manylinux_2_24_i686.whl", hash = "sha256:6a7b03a5b98e911a7785b9116805bd782815c5e2bd6c91c6a320f26fd3e7b7ad"},
+    {file = "multiprocess-0.70.14-pp39-pypy39_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:cea5bdedd10aace3c660fedeac8b087136b4366d4ee49a30f1ebf7409bce00ae"},
+    {file = "multiprocess-0.70.14-py310-none-any.whl", hash = "sha256:7dc1f2f6a1d34894c8a9a013fbc807971e336e7cc3f3ff233e61b9dc679b3b5c"},
+    {file = "multiprocess-0.70.14-py37-none-any.whl", hash = "sha256:93a8208ca0926d05cdbb5b9250a604c401bed677579e96c14da3090beb798193"},
+    {file = "multiprocess-0.70.14-py38-none-any.whl", hash = "sha256:6725bc79666bbd29a73ca148a0fb5f4ea22eed4a8f22fce58296492a02d18a7b"},
+    {file = "multiprocess-0.70.14-py39-none-any.whl", hash = "sha256:63cee628b74a2c0631ef15da5534c8aedbc10c38910b9c8b18dcd327528d1ec7"},
+    {file = "multiprocess-0.70.14.tar.gz", hash = "sha256:3eddafc12f2260d27ae03fe6069b12570ab4764ab59a75e81624fac453fbf46a"},
 ]
 munch = [
     {file = "munch-2.5.0-py2.py3-none-any.whl", hash = "sha256:6f44af89a2ce4ed04ff8de41f70b226b984db10a91dcc7b9ac2efc1c77022fdd"},
